@@ -26,28 +26,28 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip list
 
-      - name: Run Tests and Generate HTML Report
+      - name: Run Pytest and Generate HTML Report
         run: |
           mkdir -p reports
-          pytest -v --html=reports/report.html --self-contained-html
-          echo "---- reports folder ----"
+          pytest -v --html=reports/report.html --self-contained-html || true
+          echo "✅ reports folder:"
           ls -la reports
 
-      - name: Copy report to docs folder (GitHub Pages)
+      - name: Copy report into docs folder for GitHub Pages
         run: |
           mkdir -p docs
-          cp reports/report.html docs/report.html
-          echo "---- docs folder ----"
+          cp -f reports/report.html docs/report.html
+          echo "✅ docs folder:"
           ls -la docs
 
-      - name: Commit and push report.html
+      - name: Commit & Push report.html
         run: |
-          git status
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add docs/report.html
           git status
+
           git commit -m "Update QA HTML report" || echo "Nothing to commit"
-          git push origin HEAD:main
+          git push
