@@ -1,0 +1,81 @@
+2026-01-21 10:42:45,426 - INFO - Launching browser
+2026-01-21 10:42:55,361 - INFO - Launching browser
+2026-01-21 10:42:57,403 - INFO - Launching browser
+2026-01-21 10:42:59,320 - INFO - Launching browser
+2026-01-21 10:43:01,209 - INFO - Launching browser
+2026-01-21 10:46:23,932 - INFO - Launching browser
+2026-01-21 10:46:34,294 - INFO - Forgot password test started
+2026-01-21 10:46:42,837 - INFO - Closing browser
+2026-01-21 10:46:45,076 - INFO - Launching browser
+2026-01-21 10:46:46,583 - INFO - Valid login test started
+2026-01-21 10:46:52,129 - INFO - Valid login test passed
+2026-01-21 10:46:52,130 - INFO - Closing browser
+2026-01-21 10:46:58,433 - INFO - Launching browser
+2026-01-21 10:46:59,920 - INFO - Invalid login test started: {'username': 'tomsmith', 'password': 'wrongpass', 'expected_error': 'Your password is invalid!'}
+2026-01-21 10:47:05,978 - INFO - Invalid login test passed
+2026-01-21 10:47:05,979 - INFO - Closing browser
+2026-01-21 10:47:12,285 - INFO - Launching browser
+2026-01-21 10:47:13,854 - INFO - Invalid login test started: {'username': 'wronguser', 'password': 'SuperSecretPassword!', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:47:19,678 - INFO - Invalid login test passed
+2026-01-21 10:47:19,678 - INFO - Closing browser
+2026-01-21 10:47:25,964 - INFO - Launching browser
+2026-01-21 10:47:27,459 - INFO - Invalid login test started: {'username': '', 'password': '', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:47:34,726 - INFO - Invalid login test passed
+2026-01-21 10:47:34,727 - INFO - Closing browser
+2026-01-21 10:49:02,451 - INFO - Launching browser
+2026-01-21 10:49:03,998 - INFO - Forgot password test started
+2026-01-21 10:49:09,125 - INFO - Closing browser
+2026-01-21 10:49:11,335 - INFO - Launching browser
+2026-01-21 10:49:12,829 - INFO - Valid login test started
+2026-01-21 10:49:18,249 - INFO - Closing browser
+2026-01-21 10:49:20,464 - INFO - Launching browser
+2026-01-21 10:49:21,977 - INFO - Invalid login test started: {'username': 'tomsmith', 'password': 'wrongpass', 'expected_error': 'Your password is invalid!'}
+2026-01-21 10:49:28,084 - INFO - Invalid login test passed
+2026-01-21 10:49:28,085 - INFO - Closing browser
+2026-01-21 10:49:34,362 - INFO - Launching browser
+2026-01-21 10:49:35,865 - INFO - Invalid login test started: {'username': 'wronguser', 'password': 'SuperSecretPassword!', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:49:40,781 - INFO - Invalid login test passed
+2026-01-21 10:49:40,782 - INFO - Closing browser
+2026-01-21 10:49:46,996 - INFO - Launching browser
+2026-01-21 10:49:48,514 - INFO - Invalid login test started: {'username': '', 'password': '', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:49:54,176 - INFO - Invalid login test passed
+2026-01-21 10:49:54,177 - INFO - Closing browser
+2026-01-21 10:52:28,939 - INFO - Launching browser
+2026-01-21 10:52:31,405 - INFO - Forgot password test started
+2026-01-21 10:52:43,715 - INFO - Closing browser
+2026-01-21 10:52:45,942 - INFO - Launching browser
+2026-01-21 10:52:47,456 - INFO - Valid login test started
+2026-01-21 10:52:56,027 - INFO - Valid login test passed
+2026-01-21 10:52:56,028 - INFO - Closing browser
+2026-01-21 10:53:02,322 - INFO - Launching browser
+2026-01-21 10:53:03,817 - INFO - Invalid login test started: {'username': 'tomsmith', 'password': 'wrongpass', 'expected_error': 'Your password is invalid!'}
+2026-01-21 10:53:11,030 - INFO - Invalid login test passed
+2026-01-21 10:53:11,031 - INFO - Closing browser
+2026-01-21 10:53:17,311 - INFO - Launching browser
+2026-01-21 10:53:18,783 - INFO - Invalid login test started: {'username': 'wronguser', 'password': 'SuperSecretPassword!', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:53:25,101 - INFO - Invalid login test passed
+2026-01-21 10:53:25,101 - INFO - Closing browser
+2026-01-21 10:53:31,401 - INFO - Launching browser
+2026-01-21 10:53:32,890 - INFO - Invalid login test started: {'username': '', 'password': '', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:53:39,526 - INFO - Invalid login test passed
+2026-01-21 10:53:39,526 - INFO - Closing browser
+2026-01-21 10:56:22,144 - INFO - Launching browser
+2026-01-21 10:56:23,810 - INFO - Forgot password test started
+2026-01-21 10:56:29,067 - WARNING - Forgot password returned Internal Server Error (demo site behavior)
+2026-01-21 10:56:29,068 - INFO - Closing browser
+2026-01-21 10:56:35,355 - INFO - Launching browser
+2026-01-21 10:56:37,177 - INFO - Valid login test started
+2026-01-21 10:56:46,578 - INFO - Valid login test passed
+2026-01-21 10:56:46,580 - INFO - Closing browser
+2026-01-21 10:56:52,856 - INFO - Launching browser
+2026-01-21 10:56:54,331 - INFO - Invalid login test started: {'username': 'tomsmith', 'password': 'wrongpass', 'expected_error': 'Your password is invalid!'}
+2026-01-21 10:56:59,379 - INFO - Invalid login test passed
+2026-01-21 10:56:59,380 - INFO - Closing browser
+2026-01-21 10:57:05,651 - INFO - Launching browser
+2026-01-21 10:57:07,160 - INFO - Invalid login test started: {'username': 'wronguser', 'password': 'SuperSecretPassword!', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:57:20,052 - INFO - Invalid login test passed
+2026-01-21 10:57:20,053 - INFO - Closing browser
+2026-01-21 10:57:26,341 - INFO - Launching browser
+2026-01-21 10:57:27,832 - INFO - Invalid login test started: {'username': '', 'password': '', 'expected_error': 'Your username is invalid!'}
+2026-01-21 10:57:38,195 - INFO - Invalid login test passed
+2026-01-21 10:57:38,196 - INFO - Closing browser

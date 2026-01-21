@@ -1,0 +1,47 @@
+name: Run QA Automation Tests
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Chromium Browser
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+
+      - name: Run Pytest (Generate HTML Report)
+        run: |
+          pytest -v --html=reports/report.html --self-contained-html
+
+      - name: Deploy Report to GitHub Pages (docs/)
+        run: |
+          mkdir -p docs
+          cp reports/report.html docs/report.html
+
+      - name: Commit & Push updated report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/report.html
+          git commit -m "Update QA test report" || echo "No changes to commit"
+          git push
