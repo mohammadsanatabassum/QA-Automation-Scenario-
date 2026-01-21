@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -24,24 +24,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Chromium Browser
+      - name: Run Tests and Generate HTML Report
         run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
-
-      - name: Run Pytest (Generate HTML Report)
-        run: |
+          mkdir -p reports
           pytest -v --html=reports/report.html --self-contained-html
 
-      - name: Deploy Report to GitHub Pages (docs/)
+      - name: Copy report into docs folder (GitHub Pages source)
         run: |
           mkdir -p docs
           cp reports/report.html docs/report.html
 
-      - name: Commit & Push updated report
+      - name: Commit and push report.html to GitHub
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add docs/report.html
-          git commit -m "Update QA test report" || echo "No changes to commit"
+          git commit -m "Update QA test report" || echo "No changes"
           git push
