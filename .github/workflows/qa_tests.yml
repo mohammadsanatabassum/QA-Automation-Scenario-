@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,21 +26,28 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip list
 
       - name: Run Tests and Generate HTML Report
         run: |
           mkdir -p reports
           pytest -v --html=reports/report.html --self-contained-html
+          echo "---- reports folder ----"
+          ls -la reports
 
-      - name: Copy report into docs folder (GitHub Pages source)
+      - name: Copy report to docs folder (GitHub Pages)
         run: |
           mkdir -p docs
           cp reports/report.html docs/report.html
+          echo "---- docs folder ----"
+          ls -la docs
 
-      - name: Commit and push report.html to GitHub
+      - name: Commit and push report.html
         run: |
+          git status
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add docs/report.html
-          git commit -m "Update QA test report" || echo "No changes"
-          git push
+          git status
+          git commit -m "Update QA HTML report" || echo "Nothing to commit"
+          git push origin HEAD:main
